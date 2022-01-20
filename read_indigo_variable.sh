@@ -45,7 +45,7 @@ if [ -v "${LEVEL_DIRECTION}" ] || [ -z "${LEVEL_DIRECTION}" ]; then
   exit 3
 fi
 
-# Poll the internal temperature of the Device
+# Poll Indigo API for the value of the variable. It comes out in JSON format, but we parse it out.
 VALUE=$(/usr/bin/curl -s -u ${USERNAME}:${PASSWORD} --digest http://${SERVER}:${PORT}/variables/${VARIABLE_NAME}.json | grep "value" | cut -d':' -f2 | cut -d',' -f 1 | xargs)
 
 # Bash can't deal with floating point (like 5.231 Kw), so just lob off the decimal points.
