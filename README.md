@@ -1,4 +1,4 @@
-# indigo
+# Indigo
 Code to use with Indigo, home automation on the Mac platform
 
 # read_indigo_variable.sh
