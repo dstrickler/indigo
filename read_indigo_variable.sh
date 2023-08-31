@@ -6,6 +6,11 @@
 # Based on examples from
 # https://wiki.indigodomo.com/doku.php?id=indigo_s_restful_urls
 #
+# Note this is for the pre 2022.2 release of Indigo's API. There is
+# a new API used in the 2022.2 version and beyond that's not compatible
+# with the cURL calls in this code.
+#
+#
 round() {
   printf "%.${2}f" "${1}"
 }
